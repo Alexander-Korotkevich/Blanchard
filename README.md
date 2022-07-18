@@ -1,5 +1,5 @@
 # Blanchard
 
-In developing
+В разработке
 
 GitHub Pages - https://alexander-korotckevich.github.io/Blanchard/
