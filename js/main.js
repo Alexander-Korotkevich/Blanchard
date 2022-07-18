@@ -36,8 +36,35 @@ btns.forEach(item => {
 const element = document.querySelector('#custom-select');
   const choices = new Choices(element, {
     searchEnabled: false,
-    itemSelectText: 'Выбрать',
     position: 'bottom',
+    renderSelectedChoices: 'auto-always',
+    itemSelectText: '',
   });
 
+// swiper
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  spaceBetween: 10,
+  loop: false,
 
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+// accordion
+$(".accordion").accordion({
+  heightStyle: "content"
+});
