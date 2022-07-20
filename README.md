@@ -2,4 +2,4 @@
 
 В разработке
 
-GitHub Pages - https://alexander-korotckevich.github.io/Blanchard/
+<a href="https://alexander-korotckevich.github.io/Blanchard/">Demo Desktop vers</a>
