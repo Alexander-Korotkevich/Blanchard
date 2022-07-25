@@ -47,9 +47,29 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 3,
-  slidesPerGroup: 3,
+
   spaceBetween: 10,
   loop: false,
+
+  breakpoints: {
+
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      slidesPerGroup: 3,
+    },
+
+    1024: {
+      spaceBetween: 30,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 38,
+      slidesPerGroup: 2,
+    },
+
+  },
 
   // If we need pagination
   pagination: {
@@ -94,13 +114,33 @@ const eventsSwiper = new Swiper('.events__swiper', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 3,
-  spaceBetween: 10,
+  spaceBetween: 27,
   loop: false,
+  breakpoints: {
+
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 27,
+      slidesPerGroup: 3,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+
+  },
 
   // Navigation arrows
   navigation: {
     nextEl: '.events__swiper-next',
     prevEl: '.events__swiper-prev',
+  },
+
+  pagination: {
+    el: '.events__swiper-pagination',
+    type: 'bullets',
   },
 });
 
@@ -128,8 +168,27 @@ const projectsSwiper = new Swiper('.projects__swiper', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 50,
+  slidesPerGroup: 3,
   loop: false,
+  breakpoints: {
 
+    1600: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 33,
+    }
+
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper__next-btn',
@@ -220,6 +279,43 @@ ymaps.ready(function () {
 $('a[href*="#"]').on('click', function() {
   $('html, body').animate({
     scrollTop: $($.attr(this, 'href')).offset().top
-  }, 200);
+  }, 500);
   return false;
 });
+
+
+// burgerMenu
+const burgerBtn = document.querySelector('.header__burger-btn');
+const burgerMenu = document.querySelector('.header__burger-menu');
+const burgerCloseBtn = document.querySelector('.burger-menu__close-btn');
+
+burgerBtn.addEventListener('click', () => {
+  burgerMenu.classList.toggle('active');
+})
+
+burgerCloseBtn.addEventListener('click', () => {
+  burgerMenu.classList.toggle('active');
+})
+
+document.querySelectorAll('.nav__link_burger-menu').forEach((el) => {
+  el.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+  })
+})
+
+// search
+const searchBtn = document.querySelector('.header__search-open-btn');
+const search = document.querySelector('.header__search-form');
+const searchCloseBtn = document.querySelector('.search-form__close-btn');
+
+searchBtn.addEventListener('click', () => {
+  search.classList.toggle('active');
+  searchBtn.classList.add('remove');
+});
+
+searchCloseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  search.classList.remove('active');
+  searchBtn.classList.remove('remove');
+})
