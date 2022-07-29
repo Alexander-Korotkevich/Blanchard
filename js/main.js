@@ -69,6 +69,11 @@ const swiper = new Swiper('.swiper', {
       slidesPerGroup: 2,
     },
 
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    }
+
   },
 
   // If we need pagination
@@ -130,6 +135,11 @@ const eventsSwiper = new Swiper('.events__swiper', {
       slidesPerGroup: 2,
     },
 
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+
   },
 
   // Navigation arrows
@@ -168,7 +178,6 @@ const projectsSwiper = new Swiper('.projects__swiper', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 50,
-  slidesPerGroup: 3,
   loop: false,
   breakpoints: {
 
@@ -181,12 +190,20 @@ const projectsSwiper = new Swiper('.projects__swiper', {
     1024: {
       slidesPerView: 2,
       spaceBetween: 50,
+      slidesPerGroup: 2,
     },
 
     768: {
       slidesPerView: 2,
       spaceBetween: 33,
-    }
+      slidesPerGroup: 2,
+    },
+
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 21,
+      slidesPerGroup: 1,
+    },
 
   },
   // Navigation arrows
