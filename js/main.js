@@ -55,11 +55,12 @@ const swiper = new Swiper('.swiper', {
 
     1600: {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 45,
       slidesPerGroup: 3,
     },
 
     1024: {
+      slidesPerView: 2,
       spaceBetween: 30,
     },
 
@@ -125,7 +126,7 @@ const eventsSwiper = new Swiper('.events__swiper', {
 
     1024: {
       slidesPerView: 3,
-      spaceBetween: 27,
+      spaceBetween: 32,
       slidesPerGroup: 3,
     },
 
@@ -138,6 +139,7 @@ const eventsSwiper = new Swiper('.events__swiper', {
     320: {
       slidesPerView: 1,
       spaceBetween: 0,
+      slidesPerGroup: 1,
     },
 
   },
